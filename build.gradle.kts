@@ -21,11 +21,20 @@ repositories {
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 	implementation("org.springframework.boot:spring-boot-starter-web")
+	implementation("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:3.1.4")
 	compileOnly("org.projectlombok:lombok")
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
 	runtimeOnly("com.h2database:h2")
 	annotationProcessor("org.projectlombok:lombok")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
+	implementation( "org.springframework.boot:spring-boot-starter-data-rest")
+	implementation ("org.liquibase:liquibase-core")
+	//implementation ("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client")
+	implementation ("org.springframework.cloud:spring-cloud-starter-openfeign")
+	compileOnly("'org.projectlombok:lombok")
+	runtimeOnly ("com.mysql:mysql-connector-j")
+	testImplementation ("org.springframework.boot:spring-boot-starter-test")
+
 }
 
 tasks.withType<Test> {
